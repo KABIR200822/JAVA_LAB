@@ -1,0 +1,32 @@
+public class Question2FOR
+{
+    public static void main(String args[])
+    {
+        int i=1;
+        Node prev=null;
+        Node head=null;
+        while(i<=15)
+        {
+            Node node = new Node();
+            node.val= i;
+            if(prev==null)
+            {
+                head = node;
+            }
+            else 
+            {
+                prev.next=node;
+            }
+            prev=node;
+            i++;
+        }
+        prev=head;
+        int count=0;
+        while(prev!=null)
+        {
+            count++;
+            prev=prev.next;
+        }
+        System.out.println(count);
+    }
+}
