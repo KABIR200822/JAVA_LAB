@@ -1,0 +1,36 @@
+public class Question3FOR
+{
+    public static void main(String args[])
+    {
+        int i=1;
+        Node head=null;
+        Node prev=null;
+        while(i<=10)
+        {
+            Node node= new Node();
+            node.val=i;
+            if(prev==null)
+            {
+                head=node;
+            }
+            else
+            {
+                prev.next=node;
+            }
+            prev=node;
+            i++;
+        }
+        int val=5;
+        prev=head;
+        int count=1;
+        while(prev!=null)
+        {
+            if(prev.val==val)
+            {
+                System.out.print(count);
+            }
+            count++;
+            prev=prev.next;
+        }
+    }
+}
