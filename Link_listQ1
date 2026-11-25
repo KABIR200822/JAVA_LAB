@@ -1,0 +1,30 @@
+public class Question1
+{
+    public static void main(String args[])
+    {
+        int i=1;
+        Node prev= null;
+        Node head=null;
+        while(i<=15)
+        {
+            Node node= new Node();
+            node.val= i;
+            if(prev == null)
+            {
+                head= node;
+            }
+            else
+            {
+                prev.next=node;
+            }
+            prev=node;
+            i+=1;
+        }
+        prev=head;
+        while(prev !=null)
+        {
+            System.out.println(prev.val);
+            prev =prev.next;
+        }
+    }
+}
